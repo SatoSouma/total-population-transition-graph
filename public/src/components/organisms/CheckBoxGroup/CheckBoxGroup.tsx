@@ -1,6 +1,7 @@
 import { useCheckBoxGroup } from './useCheckBoxGroup'
+import React from 'react'
 
-const CheckBoxGroup = () => {
+const CheckBoxGroup: React.VFC = () => {
   const [result] = useCheckBoxGroup()
   console.log(result)
 
