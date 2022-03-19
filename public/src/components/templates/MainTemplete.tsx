@@ -1,6 +1,6 @@
 import { CheckBoxGroup } from '../../../index'
 
-const MainTemplete = () => {
+const MainTemplete: React.VFC = () => {
   return <CheckBoxGroup />
 }
 

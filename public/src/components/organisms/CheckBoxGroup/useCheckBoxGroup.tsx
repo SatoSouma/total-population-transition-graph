@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { ResasApi } from 'types/resasApiType'
 const requestHeaders: HeadersInit = new Headers()
 
 if (process.env.NEXT_PUBLIC_RESAS_API_KEY) {
@@ -6,7 +7,7 @@ if (process.env.NEXT_PUBLIC_RESAS_API_KEY) {
 }
 
 export function useCheckBoxGroup() {
-  const [result, setResult] = useState<any>('')
+  const [result, setResult] = useState<ResasApi | string>('')
 
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_RESAS_API_URL}/api/v1/prefectures`, { method: 'GET', headers: requestHeaders })
