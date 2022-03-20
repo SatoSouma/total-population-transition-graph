@@ -6,6 +6,10 @@ const options: Highcharts.Options = {
   title: {
     text: '総人口推移グラフ',
   },
+  // x軸のラベルを指定
+  xAxis: { title: { text: '人口数' } },
+  // y軸のラベルを指定
+  yAxis: { title: { text: '年度' } },
   series: [
     {
       type: 'line',
