@@ -1,9 +1,9 @@
-export type ResasApi = {
+export type resasApi = {
   message: null
-  result: [Pref]
+  result: [pref]
 }
 
-type Pref = {
+export type pref = {
   prefCode: number
   prefName: string
 }
