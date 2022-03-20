@@ -4,12 +4,21 @@ import HighchartsReact from 'highcharts-react-official'
 
 const options: Highcharts.Options = {
   title: {
-    text: 'My chart',
+    text: '総人口推移グラフ',
   },
   series: [
     {
       type: 'line',
+      name: '福岡',
       data: [1, 2, 3],
+    },
+    {
+      type: 'line',
+      data: [3, 2, 1],
+    },
+    {
+      type: 'line',
+      data: [1, 5, 7],
     },
   ],
 }
