@@ -8,9 +8,9 @@ export function useGraph() {
 
   const options: Highcharts.Options = {
     title: {
-      text: '総人口推移グラフ',
+      text: 'グラフ',
     },
-    xAxis: { title: { text: '年' }, categories: year },
+    xAxis: { title: { text: '年度' }, categories: year },
     yAxis: { title: { text: '人口数' } },
     series: [],
   }
