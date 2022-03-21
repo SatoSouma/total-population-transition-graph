@@ -27,7 +27,6 @@ const Graph: React.VFC<HighchartsReact.Props> = (props) => {
   const chartComponentRef = useRef<HighchartsReact.RefObject>(null)
   return (
     <>
-      {console.log(prefInfo)}
       <HighchartsReact
         highcharts={Highcharts}
         options={options}
