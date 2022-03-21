@@ -12,7 +12,14 @@ const CheckBoxGroup: React.VFC = () => {
       <p>都道府県</p>
       <div className={styles.checkBoxGroup}>
         {result.result.map((val: pref) => {
-          return <CheckBox key={val.prefCode} prefCode={val.prefCode} prefName={val.prefName} handleClick={handleClick} />
+          return (
+            <CheckBox
+              key={val.prefCode}
+              prefCode={val.prefCode}
+              prefName={val.prefName}
+              handleClick={handleClick}
+            />
+          )
         })}
       </div>
     </>
