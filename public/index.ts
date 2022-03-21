@@ -7,3 +7,10 @@ export { default as Graph } from './src/components/organisms/Graph/Graph'
 
 // templates
 export { default as MainTemplete } from './src/components/templates/MainTemplete'
+
+//redux
+//state
+export { default as GlobalStates } from './redux/selectors/index'
+
+//action
+export { default as Actions } from './redux/actions/index'
