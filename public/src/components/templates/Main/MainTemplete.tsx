@@ -1,4 +1,4 @@
-import { CheckBoxGroup, Graph } from '../../../index'
+import { CheckBoxGroup, Graph } from 'public'
 import styles from './MainTemplete.module.scss'
 
 const MainTemplete: React.VFC = () => {
