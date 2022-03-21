@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import { resasApi } from 'types/resasApiType'
+import { useDispatch } from 'react-redux'
+import { Actions } from 'public'
+
 const requestHeaders: HeadersInit = new Headers()
 
 if (process.env.NEXT_PUBLIC_RESAS_API_KEY) {
@@ -8,6 +11,8 @@ if (process.env.NEXT_PUBLIC_RESAS_API_KEY) {
 
 export function useCheckBoxGroup() {
   const [result, setResult] = useState<resasApi | null>(null)
+  const actions = new Actions()
+  const dispatch = useDispatch()
 
   const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
@@ -15,7 +20,6 @@ export function useCheckBoxGroup() {
     }
     if (!e.target.checked) {
       console.log('押されていません')
-      console.log(e.target.checked)
     }
   }
 
@@ -27,7 +31,7 @@ export function useCheckBoxGroup() {
       .then((json) => {
         const data = json.result.data[0].data
         const prefInfo = { prefCode: prefCode, prefName: prefName, data: data }
-        console.log(prefInfo)
+        dispatch(actions.setAddPref(prefInfo))
       })
   }
 

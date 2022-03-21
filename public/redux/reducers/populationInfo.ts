@@ -10,7 +10,7 @@ const populationInfo = (state = initianAppState, action: action) => {
     case ADDPREF:
       return {
         ...state,
-        prefInfo: [{ ...state.prefInfo }, action.input],
+        prefInfo: [...state.prefInfo, action.input],
       }
 
     case REMOVEPREF:

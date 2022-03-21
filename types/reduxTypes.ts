@@ -1,5 +1,5 @@
 export type reduxState = {
-  prefInfo: prefInfo | []
+  prefInfo: [prefInfo] | []
 }
 
 export type prefInfo = {
