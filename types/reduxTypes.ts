@@ -1,19 +1,20 @@
 export type reduxState = {
-  prefInfo: [prefInfo] | []
+  prefInfo: prefInfo[]
+  year: number[] | []
 }
 
 export type prefInfo = {
   prefCode: string
   prefName: string
-  data: [data]
+  value: number[]
+}
+
+export type data = {
+  year: number
+  value: number
 }
 
 export type action = {
   type: string
   input: string
-}
-
-type data = {
-  year: number
-  value: number
 }

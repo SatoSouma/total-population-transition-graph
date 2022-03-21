@@ -1,9 +1,9 @@
 import { RootStateOrAny } from 'react-redux'
 
-class GlobalStates {
-  prefInfo = (state: RootStateOrAny) => {
-    return state.populationInfo.prefInfo
-  }
+export const PrefInfo = (state: RootStateOrAny) => {
+  return state.populationInfo.prefInfo
 }
 
-export default GlobalStates
+export const Year = (state: RootStateOrAny) => {
+  return state.populationInfo.year
+}

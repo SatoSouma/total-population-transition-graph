@@ -1,16 +1,17 @@
-import { ADDPREF, REMOVEPREF } from './types'
+import { ADDPREF, REMOVEPREF, YEAR } from './types'
 import { prefInfo } from 'types/reduxTypes'
 
-class Actions {
-  setAddPref = (input: prefInfo) => ({
-    type: ADDPREF,
-    input,
-  })
+export const setAddPref = (input: prefInfo) => ({
+  type: ADDPREF,
+  input,
+})
 
-  setRemovePref = (input: string) => ({
-    type: REMOVEPREF,
-    input,
-  })
-}
+export const setRemovePref = (input: string) => ({
+  type: REMOVEPREF,
+  input,
+})
 
-export default Actions
+export const setYear = (input: number[]) => ({
+  type: YEAR,
+  input,
+})

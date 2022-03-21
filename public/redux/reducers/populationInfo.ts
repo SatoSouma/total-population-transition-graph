@@ -1,8 +1,9 @@
-import { ADDPREF, REMOVEPREF } from '../actions/types'
+import { ADDPREF, REMOVEPREF, YEAR } from '../actions/types'
 import { reduxState, action } from 'types/reduxTypes'
 
 const initianAppState: reduxState = {
   prefInfo: [],
+  year: [],
 }
 
 const populationInfo = (state = initianAppState, action: action) => {
@@ -14,7 +15,13 @@ const populationInfo = (state = initianAppState, action: action) => {
       }
 
     case REMOVEPREF:
-      return {}
+      return {
+        ...state,
+        prefInfo: state.prefInfo.filter((val) => val.prefCode !== action.input),
+      }
+
+    case YEAR:
+      return { ...state, year: action.input }
 
     default:
       return state

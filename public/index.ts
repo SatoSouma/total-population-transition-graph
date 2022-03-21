@@ -10,7 +10,10 @@ export { default as MainTemplete } from './src/components/templates/MainTemplete
 
 //redux
 //state
-export { default as GlobalStates } from './redux/selectors/index'
+export { PrefInfo } from './redux/selectors/index'
+export { Year } from './redux/selectors/index'
 
 //action
-export { default as Actions } from './redux/actions/index'
+export { setAddPref } from './redux/actions/index'
+export { setRemovePref } from './redux/actions/index'
+export { setYear } from './redux/actions/index'
