@@ -6,6 +6,7 @@ export function useGraph() {
   const prefInfo = useSelector(PrefInfo)
   const year = useSelector(Year)
 
+  //Highcharts用のoptionを作成
   const options: Highcharts.Options = {
     title: {
       text: 'グラフ',
@@ -15,6 +16,7 @@ export function useGraph() {
     series: [],
   }
 
+  //optionに都道府県データを挿入
   prefInfo.map((val: prefInfo) => {
     if (!!options.series) {
       options.series.push({ type: 'line', name: val.prefName, data: val.value })

@@ -1,6 +1,6 @@
 export type reduxState = {
   prefInfo: prefInfo[]
-  year: number[] | []
+  year: number[]
 }
 
 export type prefInfo = {
