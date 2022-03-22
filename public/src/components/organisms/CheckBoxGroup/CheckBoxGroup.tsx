@@ -3,15 +3,16 @@ import React from 'react'
 import { CheckBox } from 'public'
 import { pref } from 'types/resasApiType'
 import styles from './CheckBoxGroup.module.scss'
+import { resasApi } from 'types/resasApiType'
 
-const CheckBoxGroup: React.VFC = () => {
-  const [result, handleClick] = useCheckBoxGroup()
+const CheckBoxGroup: React.VFC<resasApi> = ({ prefecturesData }) => {
+  const [handleClick] = useCheckBoxGroup()
 
-  return !!result ? (
+  return !!prefecturesData ? (
     <>
       <p>都道府県</p>
       <div className={styles.checkBoxGroup}>
-        {result.result.map((val: pref) => {
+        {prefecturesData.result.map((val: pref) => {
           return (
             <CheckBox
               key={val.prefCode}
