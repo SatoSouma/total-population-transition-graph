@@ -5,11 +5,13 @@ import { resasApi } from 'types/resasApiType'
 const MainTemplete: React.VFC<resasApi> = ({ prefecturesData }) => {
   return (
     <>
+      <Title />
       <div className={styles.main}>
-        <Title />
         <CheckBoxGroup prefecturesData={prefecturesData} />
       </div>
-      <Graph />
+      <div className={styles.graph}>
+        <Graph />
+      </div>
     </>
   )
 }
