@@ -1,6 +1,8 @@
 export type resasApi = {
-  message: null
-  result: pref[]
+  prefecturesData: {
+    message: null
+    result: pref[]
+  }
 }
 
 export type pref = {
