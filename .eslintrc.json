@@ -1,20 +1,15 @@
 {
   "env": {
-    "browser": true, //ブラウザでメジャーなもの（documentなど）を許可
-    "es6": true //ES6の書き方許可
+    "browser": true,
+    "es6": true
   },
   "parser": "@typescript-eslint/parser",
   "extends": [
     "prettier" //Prettier適用
   ],
   "parserOptions": { "sourceType": "module" },
-  //個別ルール
   "rules": {
-    "no-extra-semi": "error", //セミコロンがないと警告
-    "quotes": [
-      //シングルクオートを使っていないと警告
-      "warn",
-      "single"
-    ]
+    "no-extra-semi": "error",
+    "quotes": ["warn", "single"]
   }
 }

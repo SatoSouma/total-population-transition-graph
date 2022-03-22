@@ -1,6 +1,6 @@
 export type resasApi = {
   message: null
-  result: [pref]
+  result: pref[]
 }
 
 export type pref = {
