@@ -13,9 +13,9 @@ if (process.env.NEXT_PUBLIC_RESAS_API_KEY) {
 }
 
 export function useCheckBoxGroup() {
-  const [result, setResult] = useState<resasApi | null>(null)
   const dispatch = useDispatch()
 
+  //チェックボックスのonClick用関数
   const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     //チェックボックスが押されたとき
     if (e.target.checked) {
@@ -54,19 +54,5 @@ export function useCheckBoxGroup() {
       })
   }
 
-  //初期レンダリング時に都道府県データを取得
-  useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_RESAS_API_URL}/api/v1/prefectures`, {
-      method: 'GET',
-      headers: requestHeaders,
-    })
-      .then((res) => {
-        return res.json()
-      })
-      .then((json) => {
-        setResult(json)
-      })
-  }, [])
-
-  return [result, handleClick] as const
+  return [handleClick] as const
 }
