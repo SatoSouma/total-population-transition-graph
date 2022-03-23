@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
     requestHeaders.set('X-API-KEY', process.env.NEXT_PUBLIC_RESAS_API_KEY)
   }
 
-  //都道府県データを取得
+  //都道府県を取得
   const res = await fetch(`${process.env.NEXT_PUBLIC_RESAS_API_URL}/api/v1/prefectures`, {
     headers: requestHeaders,
   })

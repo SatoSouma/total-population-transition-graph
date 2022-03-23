@@ -14,3 +14,9 @@ export type transitionData = {
   value: number
   year: number
 }
+
+export type prefInfo = {
+  prefCode: string
+  prefName: string
+  data: number[]
+}

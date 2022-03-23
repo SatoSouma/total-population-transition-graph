@@ -1,12 +1,7 @@
-import { useSelector } from 'react-redux'
-import { PrefInfo, Year } from 'public'
-import { prefInfo } from 'types/reduxTypes'
+import { prefInfo } from 'types/resasApiType'
 
-export function useGraph() {
-  const prefInfo = useSelector(PrefInfo)
-  const year = useSelector(Year)
-
-  //Highcharts用のoptionを作成
+export function useGraph(prefInfo: prefInfo[], year: string[]) {
+  //Highcharts用のoptionデータを作成
   const options: Highcharts.Options = {
     title: {
       text: 'グラフ',
@@ -16,10 +11,10 @@ export function useGraph() {
     series: [],
   }
 
-  //optionに都道府県データを挿入
+  //optionに都道府県毎のデータを挿入
   prefInfo.map((val: prefInfo) => {
     if (!!options.series) {
-      options.series.push({ type: 'line', name: val.prefName, data: val.value })
+      options.series.push({ type: 'line', name: val.prefName, data: val.data })
     }
   })
 
