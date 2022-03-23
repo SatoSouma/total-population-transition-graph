@@ -7,8 +7,6 @@ const MainTemplete: React.VFC<resasApi> = ({ prefecturesData }) => {
   const [prefInfo, year, handleClick] = useMainTemplate()
   return (
     <>
-      {console.log('変化後')}
-      {console.log(prefInfo)}
       <Title />
       <div className={styles.main}>
         <CheckBoxGroup prefecturesData={prefecturesData} handleClick={handleClick} />

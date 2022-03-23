@@ -39,7 +39,6 @@ export function useMainTemplate() {
           let indexReDataNumber: number = 0
 
           for (const detail of val.data) {
-            console.log(detail)
             reData[indexReDataNumber] = detail
             indexReDataNumber++
           }
