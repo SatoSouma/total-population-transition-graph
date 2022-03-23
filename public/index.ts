@@ -15,6 +15,4 @@ export { PrefInfo } from './redux/selectors/index'
 export { Year } from './redux/selectors/index'
 
 //action
-export { setAddPref } from './redux/actions/index'
-export { setRemovePref } from './redux/actions/index'
 export { setYear } from './redux/actions/index'

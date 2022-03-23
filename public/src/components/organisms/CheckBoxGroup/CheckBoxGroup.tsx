@@ -3,10 +3,10 @@ import React from 'react'
 import { CheckBox } from 'public'
 import { pref } from 'types/resasApiType'
 import styles from './CheckBoxGroup.module.scss'
-import { resasApi } from 'types/resasApiType'
+import { checkBoxGroup } from 'types/propsType'
 
-const CheckBoxGroup: React.VFC<resasApi> = ({ prefecturesData }) => {
-  const [handleClick] = useCheckBoxGroup()
+const CheckBoxGroup: React.VFC<checkBoxGroup> = ({ prefecturesData, handleClick }) => {
+  // const [handleClick] = useCheckBoxGroup()
 
   return !!prefecturesData ? (
     <>
