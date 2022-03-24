@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 都道府県別総人口推移グラフ
 
-## Getting Started
+## 作品概要
 
-First, run the development server:
+チェックボックスで選択した都道府県の総人口推移グラフを作成しました。
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### 処理の流れ
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. ResasApi から取得した都道府県データを、SSG で生成する。
+2. 都道府県データからチェックボックスを生成する。
+3. チェックボックスにチェックを入れると、対象の prefCode を ResasApi に送信し、人口構成データを取得する。
+4. prefCode、prefName、総人口推移データで都道府県毎のデータを作成、追加する。
+5. 取得した都道府県毎のデータを Hightchart で表示。
+6. 対象のチェックボックスのチェックを消すと、対象の都道府県データを削除した配列を構築し直す。
+7. 再度 Hightchart で表示。
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### デモ
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- ()
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 使用技術
 
-## Learn More
+- Next.js
+  - TypeScript
+  - Customhook
+  - sass
 
-To learn more about Next.js, take a look at the following resources:
+### 改善点・反省点
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `filter`関数で配列を回した時、添字 0 番目の配列内にある配列データが消失してしまい、後ろの配列内にある配列データが繰り上がる現象を何故そうなるのか理解しないまま`filter`関数の使用をやめてしまったので、解明する必要がある。
+- css の`em`、`rem`、`%`の使い分け方を把握できておらず、曖昧に使ってしまっている。
