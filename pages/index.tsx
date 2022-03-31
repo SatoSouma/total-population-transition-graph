@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { MainTemplete } from 'public'
+import { MainTemplete } from 'src/components'
 import { GetStaticProps, NextPage } from 'next'
 import { resasApi } from 'types/resasApiType'
 
