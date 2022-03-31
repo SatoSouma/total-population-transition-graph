@@ -1,4 +1,4 @@
-import { CheckBoxGroup, Graph, Title } from 'public'
+import { CheckBoxGroup, Graph, Title } from 'src/components'
 import styles from './MainTemplete.module.scss'
 import { resasApi } from 'types/resasApiType'
 import { useMainTemplate } from './useMainTemplate'

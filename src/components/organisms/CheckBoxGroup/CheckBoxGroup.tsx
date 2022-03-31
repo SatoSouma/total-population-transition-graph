@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckBox } from 'public'
+import { CheckBox } from 'src/components'
 import { pref } from 'types/resasApiType'
 import styles from './CheckBoxGroup.module.scss'
 import { checkBoxGroup } from 'types/propsType'
