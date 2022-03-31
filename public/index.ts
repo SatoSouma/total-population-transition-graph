@@ -1,5 +1,5 @@
 //atoms
-export { default as CheckBox } from './src/components/atoms/CheckBox'
+export { default as CheckBox } from './src/components/atoms/CheckBox/CheckBox'
 export { default as Title } from './src/components/atoms/Title/Title'
 
 // organisms
