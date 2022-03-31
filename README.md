@@ -25,6 +25,13 @@
   - Customhook
   - sass
 
+### 環境変数
+
+- NEXT_PUBLIC_RESAS_API_KEY
+  > ResasApi の API KEY を記述
+- NEXT_PUBLIC_RESAS_API_URL
+  > ResasApi の API URL を記述
+
 ### 改善点・反省点
 
 - `filter`関数で配列を回した時、添字 0 番目の配列内にある配列データが消失してしまい、後ろの配列内にある配列データが繰り上がる現象を何故そうなるのか理解しないまま`filter`関数の使用をやめてしまったので、解明する必要がある。
