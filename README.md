@@ -16,7 +16,7 @@
 
 ### デモ
 
-- ()
+- [vercel](https://total-population-transition-graph-l6rt7aoxi-satosouma.vercel.app) にデプロイしてあります。
 
 ### 使用技術
 
@@ -24,6 +24,13 @@
   - TypeScript
   - Customhook
   - sass
+
+### 環境変数
+
+- NEXT_PUBLIC_RESAS_API_KEY
+  > ResasApi の API KEY を記述
+- NEXT_PUBLIC_RESAS_API_URL
+  > ResasApi の API URL を記述
 
 ### 改善点・反省点
 
